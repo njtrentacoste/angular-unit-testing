@@ -1,0 +1,6 @@
+# node
+node_modules/
+_public/
+bundle-test.js
+bower_components/
+typings/

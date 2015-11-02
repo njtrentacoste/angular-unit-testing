@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	</head>
+	<body ng-app="demo">
+		<h1>Demo Controller:</h1>
+		<section id="greeting" ng-controller="DemoController as vm">
+			<h2 ng-if="vm.greetName.length > 0">{{ vm.greeting }}</h2>
+			<label for="name">Enter your name:</label>
+			<input type="text" id="name" ng-model="vm.greetName" ng-change="vm.greet()" />
+			<br />
+			<button ng-click="vm.googleTest()">Google AJAX Request</button>
+		</section>
+		<hr />
+		<demo-component max="25"></demo-component>
+	</body>
+	<script src="assets/app.js"></script>
+	<script src="assets/TestController.js"></script>
+	<script src="assets/DemoComponent.js"></script>
+	<script src="assets/DemoController.js"></script>
+	<script src="assets/DemoService.js"></script>
+</html>
