@@ -41,5 +41,25 @@ describe('Components', function () {
 			$scope.$digest();
 			expect(controller.counter).toEqual(1);
 		});
+		
+		it('should not show the max value error on load', function () {
+			var errorElem = element.find('#maxValueError');
+			expect(errorElem.length).toEqual(0);
+		});
+		
+		it('should show the max value reached markup after reaching the max counter value', function() {
+			// simulate 5 button clicks
+			element.find('button').triggerHandler('click');
+			element.find('button').triggerHandler('click');
+			element.find('button').triggerHandler('click');
+			element.find('button').triggerHandler('click');
+			element.find('button').triggerHandler('click');
+			
+			expect(controller.counter).toEqual(5);
+			
+			var errorElem = element.find('#maxValueError');
+			expect(errorElem.length).toEqual(1);
+			expect(errorElem.text()).toEqual('Counter max reached!');
+		});
 	});
 });

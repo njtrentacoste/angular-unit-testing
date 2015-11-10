@@ -1,6 +1,17 @@
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write(unescape("%3Cscript src='/node_modules/jquery/dist/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+			}
+		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script>
+			if (!window.angular) {
+				document.write(unescape("%3Cscript src='/node_modules/angular/angular.min.js' type='text/javascript'%3E%3C/script%3E"));
+			}
+		</script>
 	</head>
 	<body ng-app="demo">
 		<h1>Demo Controller:</h1>
@@ -12,11 +23,11 @@
 			<button ng-click="vm.googleTest()">Google AJAX Request</button>
 		</section>
 		<hr />
-		<demo-component max="25"></demo-component>
+		<demo-component max="5"></demo-component>
 	</body>
 	<script src="assets/app.js"></script>
 	<script src="assets/ComponentController.js"></script>
 	<script src="assets/DemoComponent.js"></script>
-	<script src="assets/DemoController.js"></script>
 	<script src="assets/DemoService.js"></script>
+	<script src="assets/DemoController.js"></script>
 </html>
