@@ -60,12 +60,19 @@ describe('Controllers', function () {
 			expect(mockDemoController.greeting).toEqual('Hello Nick!');
 		});
 		
+		// This test utilizes the mockDemoService created to ensure the correct
+		//	method gets called on the service.
+		// it('should call through to DemoService.googleTest', function() {
+		// 	mockDemoController.googleTest();
+		// 	expect(mockDemoService.googleTest).toHaveBeenCalled();
+		// });
+		
 		// The call to mockDemoController.googleTest() performs a GET:http://www.google.com.
 		//	Using the $httpBackend we can test that this call occurs.
 		//	Without these expect/when statements, we will get an error.
 		//	Also, the flush is necessary as the $httpBackend is synchronous, we need to manually
 		//	release the response.
-		it('should call through to DemoService.googleTest', function() {
+		it('should make a web request to www.google.com', function() {
 			$httpBackend.expect('GET', 'http://www.google.com');
 			
 			$httpBackend.when('GET', 'http://www.google.com').respond(200, 'made it');

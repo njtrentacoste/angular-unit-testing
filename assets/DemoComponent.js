@@ -12,7 +12,7 @@
 			scope: {
 				max: "="
 			},
-			controller: 'TestController',
+			controller: 'ComponentController',
 			controllerAs: 'ctrl',
 			bindToController: true	
 		};

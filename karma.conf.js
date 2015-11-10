@@ -12,7 +12,7 @@ module.exports = function (config) {
 			'assets/app.js',
 			'assets/DemoController.js',
 			'assets/DemoService.js',
-			'assets/TestController.js',
+			'assets/ComponentController.js',
 			'assets/DemoComponent.js',
 			'assets/component.html',
 			'tests/*.js'

@@ -3,11 +3,11 @@
 
 	angular
 		.module('demo')
-		.controller('TestController', TestController);
+		.controller('ComponentController', ComponentController);
 
-	TestController.$inject = ['$scope'];
+	ComponentController.$inject = [];
 	
-	function TestController($scope) {
+	function ComponentController() {
 		var vm = this;
 		vm.counter = 0;
 		

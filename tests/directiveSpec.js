@@ -8,11 +8,15 @@ describe('Components', function () {
 	beforeEach(module('demo.templates'));
 	
 	beforeEach(inject(function($controller, $rootScope, $compile) {
+		// create new scope for the component
 		$scope = $rootScope.$new();
+		// get a reference to the custom component
 		element = angular.element('<demo-component max="5"></demo-component>');
 		
+		// process the directive
 		$compile(element)($scope);
 		
+		// force angular to update
 		$scope.$digest();
 		
 		// retrieve the component's controller
