@@ -26,6 +26,7 @@ describe('Controllers', function () {
 			// });
 		});
 		
+		// angular.mock.inject
 		beforeEach(inject(function ($controller, $rootScope, _DemoService_, _$httpBackend_) {
 			$scope = $rootScope.$new();
 			mockDemoService = _DemoService_;
