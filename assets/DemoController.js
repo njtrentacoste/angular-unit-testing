@@ -9,7 +9,7 @@
 	
 	function DemoController(DemoService) {
 		var vm = this;
-		
+			
 		vm.greetPrefix = "Hello";
 		vm.greeting = '';
 		vm.greetName = '';
@@ -17,6 +17,10 @@
 		
 		vm.greet = function () {
 			vm.greeting = vm.greetPrefix + ' ' + vm.greetName + '!';
+		};
+		
+		vm.testing = function () {
+			return DemoService.test(); 
 		};
 		
 		vm.googleTest = function () {

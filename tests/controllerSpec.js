@@ -59,6 +59,12 @@ describe('Controllers', function () {
 			expect(mockDemoController.greeting).toEqual('Hello Nick!');
 		});
 		
+		it('should call the test method on DemoService', function () {
+			spyOn(mockDemoService, 'test');
+			mockDemoController.testing();
+			expect(mockDemoService.test).toHaveBeenCalled();
+		});
+		
 		// This test utilizes the mockDemoService created to ensure the correct
 		//	method gets called on the service.
 		// it('should call through to DemoService.googleTest', function() {
