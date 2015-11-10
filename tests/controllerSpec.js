@@ -14,11 +14,9 @@ describe('Controllers', function () {
 			// 			return $q.when();
 			// 		});
 			// 		
-			// 		var googleTest = function() {
-			// 			return {
-			// 				then: jasmine.createSpy('googleTest').and.callThrough()	
-			// 			}
-			// 		};
+			// 		var googleTest = jasmine.createSpy('googleTest').and.callFake(function () {
+			// 			return $q.when();
+			// 		});
 			// 		
 			// 		return {
 			// 			test: test,
