@@ -11,7 +11,7 @@ describe('Components', function () {
 		// create new scope for the component
 		$scope = $rootScope.$new();
 		// get a reference to the custom component
-		element = angular.element('<demo-component max="5"></demo-component>');
+		element = angular.element('<demo-component max="6" error-message="you broke it!"></demo-component>');
 		
 		// process the directive
 		$compile(element)($scope);
@@ -32,13 +32,16 @@ describe('Components', function () {
 			expect(controller.counter).toEqual(0);
 		});
 		
-		it('should have max counter initialized to 5', function() {
-			expect(controller.max).toEqual(5);
+		it('should have max counter initialized to 6', function() {
+			expect(controller.max).toEqual(6);
 		});
 		
+        it('should have errorMessage initialized to "you broke it!"', function() {
+            expect(controller.errorMessage).toEqual('you broke it!');
+        });
+        
 		it('should increment the counter after clicking the button', function() {
 			element.find('button').triggerHandler('click');
-			$scope.$digest();
 			expect(controller.counter).toEqual(1);
 		});
 		
@@ -54,12 +57,13 @@ describe('Components', function () {
 			element.find('button').triggerHandler('click');
 			element.find('button').triggerHandler('click');
 			element.find('button').triggerHandler('click');
+            element.find('button').triggerHandler('click');
 			
-			expect(controller.counter).toEqual(5);
+			expect(controller.counter).toEqual(6);
 			
 			var errorElem = element.find('#maxValueError');
 			expect(errorElem.length).toEqual(1);
-			expect(errorElem.text()).toEqual('Counter max reached!');
+			expect(errorElem.text()).toEqual(controller.errorMessage);
 		});
 	});
 });

@@ -3,7 +3,7 @@
 	
 	<p>Max counter value: {{ ctrl.max }}</p>
 	
-	<p>Counter: {{ ctrl.counter }} <span id="maxValueError" ng-if="ctrl.counter >= ctrl.max" style="color: red;">Counter max reached!</span></p>
+	<p>Counter: {{ ctrl.counter }} <span id="maxValueError" ng-if="ctrl.counter >= ctrl.max" style="color: red;">{{ ctrl.errorMessage }}</span></p>
 	
 	<button ng-click="ctrl.increment()" ng-disabled="ctrl.counter >= ctrl.max">+1</button>
 </section>

@@ -10,7 +10,8 @@
 			restrict: 'EA',
 			templateUrl: 'assets/component.html',
 			scope: {
-				max: "="
+				max: "=",
+                errorMessage: "@"
 			},
 			controller: 'ComponentController',
 			controllerAs: 'ctrl',

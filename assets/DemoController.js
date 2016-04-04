@@ -14,7 +14,9 @@
 		vm.greeting = '';
 		vm.greetName = '';
 		vm.googleCalled = false;
-		
+        vm.contacts = [];
+		vm.selectedContact = null;
+        
 		vm.greet = function () {
 			vm.greeting = vm.greetPrefix + ' ' + vm.greetName + '!';
 		};
@@ -28,5 +30,18 @@
 				vm.googleCalled = true;
 			});
 		};
+        
+        vm.getContacts = function () {
+            DemoService.getContacts().then(function (data) {
+                debugger;
+                vm.contacts = data;
+            });
+        };
+        
+        vm.getContact = function (contactId) {
+            DemoService.getContact(contactId).then(function (data) {
+                vm.selectedContact = data; 
+            });
+        };
 	}
 })();

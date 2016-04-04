@@ -36,6 +36,11 @@ describe('Services', function () {
 			expect(tmp).toEqual('hello');
 		});
 		
+        // The call to googleTest() performs a GET:http://www.google.com.
+		//	Using the $httpBackend we can test that this call occurs.
+		//	Without these expect/when statements, we will get an error.
+		//	Also, the flush is necessary as the $httpBackend is synchronous, we need to manually
+		//	release the response.
 		it('should make an http GET call to http://www.google.com', function () {
 			$httpBackend.expect('GET', 'http://www.google.com');
 			

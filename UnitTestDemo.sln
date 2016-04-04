@@ -1,12 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{66695C64-D9D2-4ED2-8030-14E881A97367}"
 	ProjectSection(SolutionItems) = preProject
 		assets\app.js = assets\app.js
+		assets\component.html = assets\component.html
+		assets\ComponentController.js = assets\ComponentController.js
+		assets\DemoComponent.js = assets\DemoComponent.js
 		assets\DemoController.js = assets\DemoController.js
+		assets\DemoService.js = assets\DemoService.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "typings", "typings", "{C6641264-EE8A-4BC7-B993-A645D9CB807C}"
@@ -24,6 +28,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C15A9CE7-5DCB-498F-B56B-6A8473FD2498}"
 	ProjectSection(SolutionItems) = preProject
 		tests\controllerSpec.js = tests\controllerSpec.js
+		tests\directiveSpec.js = tests\directiveSpec.js
+		tests\servicesSpec.js = tests\servicesSpec.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B3AF62C-BBF5-46B4-B7F7-9ED64AFE9DA6}"

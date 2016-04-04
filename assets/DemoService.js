@@ -8,6 +8,9 @@
 	DemoService.$inject = ['$http', '$q'];
 	
 	function DemoService($http, $q) {
+        var baseUrl = 'http://localhost:1103',
+            endpoint = '/contacts';
+        
 		var test = function () {
 			return 'hello';	
 		};
@@ -18,10 +21,26 @@
 				url: 'http://www.google.com'
 			}).then(success, failure);
 		};
+        
+        var getContacts = function() {
+            return $http({
+                method: 'GET',
+                url: baseUrl + endpoint
+            }).then(success, failure);
+        };
+        
+        var getContact = function(contactId) {
+            return $http({
+                method: 'GET',
+                url: baseUrl + endpoint + '/' + contactId
+            }).then(success, failure);
+        };
 		
 		return {
 			test: test,
-			googleTest: googleTest
+			googleTest: googleTest,
+            getContacts: getContacts,
+            getContact: getContact
 		};
 		
 		function success(resp) {

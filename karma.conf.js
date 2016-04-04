@@ -4,6 +4,7 @@ module.exports = function (config) {
 		reporters: ['spec', 'coverage'],
 		browsers: ['PhantomJS'],
 		files: [
+            // note order
 			'node_modules/jquery/dist/jquery.js',
 			'node_modules/angular/angular.js',
 			'node_modules/angular-mocks/angular-mocks.js',

@@ -21,10 +21,37 @@
 			<input type="text" id="name" ng-model="vm.greetName" ng-change="vm.greet()" />
 			<br />
 			<button ng-click="vm.googleTest()">Google AJAX Request</button>
+            
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+                <tr ng-repeat="contact in vm.contacts">
+                    <td><a {{ contact.id }}</td>
+                    <td>{{ contact.firstName }}</td>
+                    <td>{{ contact.lastName }}</td>
+                </tr>
+            </table>
+            
+            <div ng-if="vm.selectedContact">
+                <p>
+                    Contact Details:
+                </p>
+                <ul>
+                    <li>Id: {{ vm.selectedContact.id }}</li>
+                    <li>First Name: {{ vm.selectedContact.firstName }}</li>
+                    <li>Last Name: {{ vm.selectedContact.lastName }}</li>
+                    <li>Age: {{ vm.selectedContact.age }}</li>
+                    <li>Occupation: {{ vm.selectedContact.occupation }}</li>
+                </ul>
+            </div>
 		</section>
 		<hr />
-		<demo-component max="5"></demo-component>
+		<demo-component max="5" error-message="max value reached"></demo-component>
 	</body>
+    
 	<script src="assets/app.js"></script>
 	<script src="assets/ComponentController.js"></script>
 	<script src="assets/DemoComponent.js"></script>

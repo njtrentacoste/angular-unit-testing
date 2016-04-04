@@ -1,5 +1,5 @@
 {
-  "name": "UnitTestDemo",
+  "name": "unittestdemo",
   "version": "1.0.0",
   "description": "Unit Test Demo",
   "main": "gulpfile.js",
@@ -7,8 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "live-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webServer": "live-server",
+    "dataServer": "json-server --watch data.json",
+    "tests": "gulp test"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "gulp": "^3.9.0",
     "gulp-jasmine": "^2.1.0",
     "jquery": "1.11.3",
+    "json-server": "^0.8.8",
     "karma": "^0.13.10",
     "karma-coverage": "^0.5.2",
     "karma-jasmine": "^0.3.6",
