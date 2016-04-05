@@ -8,7 +8,7 @@
   },
   "scripts": {
     "webServer": "live-server",
-    "dataServer": "json-server --watch data.json",
+    "dataServer": "json-server data.json",
     "tests": "gulp test"
   },
   "author": "",

@@ -17,6 +17,12 @@
         vm.contacts = [];
 		vm.selectedContact = null;
         
+        activate();
+        
+        function activate() {
+            loadContacts();
+        }
+        
 		vm.greet = function () {
 			vm.greeting = vm.greetPrefix + ' ' + vm.greetName + '!';
 		};
@@ -32,10 +38,7 @@
 		};
         
         vm.getContacts = function () {
-            DemoService.getContacts().then(function (data) {
-                debugger;
-                vm.contacts = data;
-            });
+            loadContacts();
         };
         
         vm.getContact = function (contactId) {
@@ -43,5 +46,11 @@
                 vm.selectedContact = data; 
             });
         };
+        
+        function loadContacts() {
+            DemoService.getContacts().then(function (data) {
+                vm.contacts = data;
+            });
+        }
 	}
 })();

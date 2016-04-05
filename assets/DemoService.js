@@ -8,7 +8,7 @@
 	DemoService.$inject = ['$http', '$q'];
 	
 	function DemoService($http, $q) {
-        var baseUrl = 'http://localhost:1103',
+        var baseUrl = 'http://localhost:3000',
             endpoint = '/contacts';
         
 		var test = function () {

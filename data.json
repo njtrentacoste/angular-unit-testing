@@ -1,39 +1,39 @@
 {
-    "contacts": [
-        {
-            "id": 1,
-            "firstName": "Keith",
-            "lastName": "Kogane",
-            "occupation": "Captain, Pilot",
-            "vehicle": "Black Lion"
-        },
-        {
-            "id": 2,
-            "firstName": "Lance",
-            "lastName": "McClain",
-            "occupation": "Pilot",
-            "vehicle": "Red Lion"
-        },
-        {
-            "id": 3,
-            "firstName": "Darrell \"Pidge\"",
-            "lastName": "Stoker",
-            "occupation": "Pilot",
-            "vehicle": "Green Lion"
-        },
-        {
-            "id": 4,
-            "firstName": "Allura",
-            "lastName": "",
-            "occupation": "Princess, Pilot",
-            "vehicle": "Blue Lion"
-        },
-        {
-            "id": 5,
-            "firstName": "Tsuyoshi \"Hunk\"",
-            "lastName": "Garett",
-            "occupation": "Pilot",
-            "vehicle": "Yellow Lion"
-        }
-    ]
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "Keith",
+      "lastName": "Kogane",
+      "occupation": "Captain, Pilot",
+      "vehicle": "Black Lion"
+    },
+    {
+      "id": 2,
+      "firstName": "Lance",
+      "lastName": "McClain",
+      "occupation": "Pilot",
+      "vehicle": "Red Lion"
+    },
+    {
+      "id": 3,
+      "firstName": "Darrell \"Pidge\"",
+      "lastName": "Stoker",
+      "occupation": "Pilot",
+      "vehicle": "Green Lion"
+    },
+    {
+      "id": 4,
+      "firstName": "Princess",
+      "lastName": "Allura",
+      "occupation": "Pilot",
+      "vehicle": "Blue Lion"
+    },
+    {
+      "id": 5,
+      "firstName": "Tsuyoshi \"Hunk\"",
+      "lastName": "Garett",
+      "occupation": "Pilot",
+      "vehicle": "Yellow Lion"
+    }
+  ]
 }
